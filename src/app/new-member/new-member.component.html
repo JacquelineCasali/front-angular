@@ -1,0 +1,12 @@
+<h1>Novo Membro</h1>
+
+<!-- novo formulario  -->
+<!-- não deixa alterar o campo  -->
+
+<label for="">Nome:</label>
+<input type="text" [(ngModel)]="menber.name" /><br />
+<label for="">Sobrenome:</label>
+<input type="text" [(ngModel)]="menber.surname" /> <br />
+<label for="">Telefone:</label>
+<input type="text" [(ngModel)]="menber.phone" /><br />
+<button (click)="save()">Salvar Novo Membro</button>

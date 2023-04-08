@@ -1,0 +1,31 @@
+<h3>Detalhe do Membro</h3>
+
+<span>Você está editando:</span>
+{{ selected_menber.name }} - {{ selected_menber.surname }}
+
+<!-- consumindo o formulario do banco de dados -->
+<!-- não deixa alterar o campo  -->
+
+<span class="image left">
+  <img
+    src="{{ selected_menber.photo }}"
+    alt="Foto de {{ selected_menber.name }}"
+  />
+</span>
+<br />
+
+<!-- <label for="">Id:</label> -->
+
+<input type="text" [(ngModel)]="selected_menber.id" readonly /><br />
+<label for="">Nome:</label>
+
+<input type="text" [(ngModel)]="selected_menber.name" /><br />
+<label for="">Sobrenome:</label>
+
+<input type="text" [(ngModel)]="selected_menber.surname" /><br />
+<label for="">Telefone:</label>
+
+<input type="text" [(ngModel)]="selected_menber.phone" /><br />
+<button (click)="update()" class="button">Update Member</button>
+<button (click)="delete()" class="button">Deletar Member</button>
+<button (click)="newMember()" class="button primary">Novo</button>

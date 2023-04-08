@@ -1,0 +1,23 @@
+<h1>Membros</h1>
+<table class="alt">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      style="cursor: pointer"
+      *ngFor="let menber of menbers"
+      (click)="menberClicked(menber)"
+    >
+      <td>{{ menber.id }}</td>
+      <td>{{ menber.name }} {{ menber.surname }}</td>
+      <td>{{ menber.phone }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<router-outlet></router-outlet>
